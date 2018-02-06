@@ -20,7 +20,7 @@ public class AppMain {
 		// Creating Configuration Instance & Passing Hibernate Configuration File
 		Configuration configObj = new Configuration();
 		configObj.configure("hibernate.cfg.xml");
-
+//hibernate.cfg.xml lo tengo en la carpeta de resources
 		// Since Hibernate Version 4.x, ServiceRegistry Is Being Used
 		//ServiceRegistry serviceRegistryObj = new StandardServiceRegistryBuilder().applySettings(configObj.getProperties()).build(); 
 
@@ -37,7 +37,7 @@ public class AppMain {
 
 			for(int i = 101; i <= 105; i++) {
 				userObj = new User();
-				userObj.setUserid(i);
+				//el id se genera solo
 				userObj.setUsername("Editor " + i);
 				userObj.setCreatedBy("Administrator");
 				userObj.setCreatedDate(new Date());
